@@ -1,0 +1,19 @@
+{
+  "name": "rebounds",
+  "version": "0.1.0",
+  "description": "Rectangle scaling functions.",
+  "main": "rebounds.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script --reporter spec"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.8.2",
+    "chai": "~1.8.1",
+    "grunt-mocha-test": "~0.8.2",
+    "coffee-script": "~1.6.3"
+  }
+}

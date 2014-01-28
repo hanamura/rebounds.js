@@ -1,0 +1,17 @@
+{
+  "name": "rebounds",
+  "main": "rebounds.js",
+  "version": "0.1.0",
+  "authors": [
+    "Taro Hanamura <m@hanamurataro.com>"
+  ],
+  "description": "Rectangle scaling functions.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
