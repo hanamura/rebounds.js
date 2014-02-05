@@ -23,13 +23,13 @@ rebounds.fit = rebounds.showAll = (a, b, opts = null) ->
 
 	if ar > br
 		r.width = b.width * a.height / b.height
-		r.height = a.height
+		r.height = b.height and a.height
 	else if ar < br
-		r.width = a.width
+		r.width = b.width and a.width
 		r.height = b.height * a.width / b.width
 	else
-		r.width = a.width
-		r.height = a.height
+		r.width = b.width and a.width
+		r.height = b.height and a.height
 
 	unless expand
 		r.width > b.width and r.width = b.width
@@ -46,6 +46,9 @@ rebounds.fit = rebounds.showAll = (a, b, opts = null) ->
 rebounds.fill = rebounds.noBorder = (a, b, opts = null) ->
 	expand = if opts?.expand? then opts.expand else true
 	reduce = if opts?.reduce? then opts.reduce else true
+
+	if b.width <= 0 < a.width or b.height <= 0 < a.height
+		throw new Error 'Rect width/height must be greater than 0 unless space width/height is 0'
 
 	r = {}
 	ar = a.width / a.height

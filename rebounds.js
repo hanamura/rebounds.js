@@ -33,13 +33,13 @@
     br = b.width / b.height;
     if (ar > br) {
       r.width = b.width * a.height / b.height;
-      r.height = a.height;
+      r.height = b.height && a.height;
     } else if (ar < br) {
-      r.width = a.width;
+      r.width = b.width && a.width;
       r.height = b.height * a.width / b.width;
     } else {
-      r.width = a.width;
-      r.height = a.height;
+      r.width = b.width && a.width;
+      r.height = b.height && a.height;
     }
     if (!expand) {
       r.width > b.width && (r.width = b.width);
@@ -60,6 +60,9 @@
     }
     expand = (opts != null ? opts.expand : void 0) != null ? opts.expand : true;
     reduce = (opts != null ? opts.reduce : void 0) != null ? opts.reduce : true;
+    if ((b.width <= 0 && 0 < a.width) || (b.height <= 0 && 0 < a.height)) {
+      throw new Error('Rect width/height must be greater than 0 unless space width/height is 0');
+    }
     r = {};
     ar = a.width / a.height;
     br = b.width / b.height;
