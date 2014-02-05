@@ -4,7 +4,8 @@ Rectangle scaling functions.
 
 ## Functions
 
-**rebounds.fit(space, rect, options = {positionX: 0.5, positionY: 0.5, reduce: true, expand: true})**  
+### rebounds.fit(space, rect, options = {positionX: 0.5, positionY: 0.5, reduce: true, expand: true})
+
 alias: **rebounds.showAll**
 
 Returns scaled `rect` bounds to fit into `space`.
@@ -24,7 +25,8 @@ rebounds.fit(
 // => {width: 200, height: 50, x: -50, y: 25}
 ```
 
-**rebounds.fill(space, rect, options = {positionX: 0.5, positionY: 0.5, reduce: true, expand: true})**  
+### rebounds.fill(space, rect, options = {positionX: 0.5, positionY: 0.5, reduce: true, expand: true})
+
 alias: **rebounds.noBorder**
 
 Returns scaled `rect` bounds to fill `space`.
@@ -44,7 +46,8 @@ rebounds.fill(
 // => {width: 200, height: 50, x: -50, y: 25}
 ```
 
-**rebounds.remain(space, rect, options = {positionX: 0.5, positionY: 0.5})**  
+### rebounds.remain(space, rect, options = {positionX: 0.5, positionY: 0.5})
+
 alias: **rebounds.noScale**
 
 Returns non-scaled `rect` bounds repositioned against `space`.
@@ -57,7 +60,8 @@ rebounds.remain(
 // => {width: 200, height: 50, x: -50, y: 25}
 ```
 
-**rebounds.stretch(space, rect, options = {positionX: 0.5, positionY: 0.5})**  
+### rebounds.stretch(space, rect, options = {positionX: 0.5, positionY: 0.5})
+
 alias: **rebounds.exactFit**
 
 Returns `rect` bounds stretched into the same size with `space`.
@@ -70,7 +74,7 @@ rebounds.stretch(
 // => {width: 100, height: 100, x: 0, y: 0}
 ```
 
-**rebounds.position(space, rect, options = {positionX: 0.5, positionY: 0.5})**
+### rebounds.position(space, rect, options = {positionX: 0.5, positionY: 0.5})
 
 Returns coordinates of `rect` repositioned against `space`.
 
