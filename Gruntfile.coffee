@@ -1,30 +1,36 @@
 module.exports = (grunt) ->
-	grunt.initConfig
-		coffee:
-			js:
-				src: 'src/*.coffee'
-				dest: 'rebounds.js'
+  grunt.initConfig
+    coffee:
+      js:
+        src: 'src/*.coffee'
+        dest: 'rebounds.js'
 
-		uglify:
-			js:
-				src: 'rebounds.js'
-				dest: 'rebounds.min.js'
+    uglify:
+      js:
+        src: 'rebounds.js'
+        dest: 'rebounds.min.js'
 
-		mochaTest:
-			test:
-				src: 'test/*.coffee'
-				options: reporter: 'spec'
+    mocha:
+      test:
+        src: 'test/**/*.html'
+        options:
+          run: true
+          reporter: 'Spec'
 
-		watch:
-			files: ['src/*.coffee', 'test/*.coffee']
-			tasks: 'default'
+    watch:
+      files: [
+        'src/*.coffee'
+        'test/*'
+      ]
+      tasks: 'default'
 
-	grunt.loadNpmTasks 'grunt-contrib-coffee'
-	grunt.loadNpmTasks 'grunt-contrib-uglify'
-	grunt.loadNpmTasks 'grunt-mocha-test'
-	grunt.loadNpmTasks 'grunt-contrib-watch'
-	grunt.registerTask 'default', [
-		'coffee:js',
-		'uglify:js',
-		'mochaTest:test',
-	]
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-mocha'
+
+  grunt.registerTask 'default', [
+    'coffee:js'
+    'uglify:js'
+    'mocha:test'
+  ]

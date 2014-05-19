@@ -1,6 +1,5 @@
 (function() {
-  var rebounds, _rebounds,
-    _this = this;
+  var rebounds, _rebounds;
 
   rebounds = {};
 
@@ -9,10 +8,12 @@
   } else {
     _rebounds = this.rebounds;
     this.rebounds = rebounds;
-    rebounds.noConflict = function() {
-      _this.rebounds = _rebounds;
-      return rebounds;
-    };
+    rebounds.noConflict = (function(_this) {
+      return function() {
+        _this.rebounds = _rebounds;
+        return rebounds;
+      };
+    })(this);
   }
 
   rebounds.CENTER = rebounds.MIDDLE = 0.5;
