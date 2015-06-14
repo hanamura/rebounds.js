@@ -1,4 +1,4 @@
-# rebounds.js
+# rebounds.js [![Build Status](https://travis-ci.org/hanamura/rebounds.js.svg?branch=master)](https://travis-ci.org/hanamura/rebounds.js)
 
 Rectangle scaling functions.
 
