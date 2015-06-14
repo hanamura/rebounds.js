@@ -2,6 +2,12 @@
 
 Rectangle scaling functions.
 
+## Installation
+
+```sh
+npm install rebounds
+```
+
 ## Functions
 
 ### rebounds.fit(space, rect, options = {positionX: 0.5, positionY: 0.5, reduce: true, expand: true})
