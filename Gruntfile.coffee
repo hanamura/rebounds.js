@@ -9,7 +9,7 @@ module.exports = (grunt) ->
 
     watch:
       files: [
-        'rebounds.js'
+        'index.js'
         'test/*'
       ]
       tasks: 'default'
