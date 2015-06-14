@@ -3,18 +3,7 @@
 
   rebounds = {};
 
-  if ((typeof module !== "undefined" && module !== null ? module.exports : void 0) != null) {
-    module.exports = rebounds;
-  } else {
-    _rebounds = this.rebounds;
-    this.rebounds = rebounds;
-    rebounds.noConflict = (function(_this) {
-      return function() {
-        _this.rebounds = _rebounds;
-        return rebounds;
-      };
-    })(this);
-  }
+  module.exports = rebounds;
 
   rebounds.CENTER = rebounds.MIDDLE = 0.5;
 
