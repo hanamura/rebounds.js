@@ -1,5 +1,5 @@
 (function() {
-  var rebounds, _rebounds;
+  var _rebounds, rebounds;
 
   rebounds = {};
 
@@ -23,7 +23,7 @@
   rebounds.RIGHT = rebounds.BOTTOM = 1;
 
   rebounds.fit = rebounds.showAll = function(a, b, opts) {
-    var ar, br, expand, r, reduce, _ref;
+    var ar, br, expand, r, reduce, ref;
     if (opts == null) {
       opts = null;
     }
@@ -50,12 +50,12 @@
       r.width < b.width && (r.width = b.width);
       r.height < b.height && (r.height = b.height);
     }
-    _ref = rebounds.position(a, r, opts), r.x = _ref.x, r.y = _ref.y;
+    ref = rebounds.position(a, r, opts), r.x = ref.x, r.y = ref.y;
     return r;
   };
 
   rebounds.fill = rebounds.noBorder = function(a, b, opts) {
-    var ar, br, expand, r, reduce, _ref;
+    var ar, br, expand, r, reduce, ref;
     if (opts == null) {
       opts = null;
     }
@@ -85,12 +85,12 @@
       r.width < b.width && (r.width = b.width);
       r.height < b.height && (r.height = b.height);
     }
-    _ref = rebounds.position(a, r, opts), r.x = _ref.x, r.y = _ref.y;
+    ref = rebounds.position(a, r, opts), r.x = ref.x, r.y = ref.y;
     return r;
   };
 
   rebounds.remain = rebounds.noScale = function(a, b, opts) {
-    var r, _ref;
+    var r, ref;
     if (opts == null) {
       opts = null;
     }
@@ -98,12 +98,12 @@
       width: b.width,
       height: b.height
     };
-    _ref = rebounds.position(a, b, opts), r.x = _ref.x, r.y = _ref.y;
+    ref = rebounds.position(a, b, opts), r.x = ref.x, r.y = ref.y;
     return r;
   };
 
   rebounds.stretch = rebounds.exactFit = function(a, b, opts) {
-    var r, _ref;
+    var r, ref;
     if (opts == null) {
       opts = null;
     }
@@ -111,7 +111,7 @@
       width: a.width,
       height: a.height
     };
-    _ref = rebounds.position(a, a, opts), r.x = _ref.x, r.y = _ref.y;
+    ref = rebounds.position(a, a, opts), r.x = ref.x, r.y = ref.y;
     return r;
   };
 

@@ -1,10 +1,5 @@
 module.exports = (grunt) ->
   grunt.initConfig
-    coffee:
-      js:
-        src: 'src/*.coffee'
-        dest: 'rebounds.js'
-
     uglify:
       js:
         src: 'rebounds.js'
@@ -19,18 +14,16 @@ module.exports = (grunt) ->
 
     watch:
       files: [
-        'src/*.coffee'
+        'rebounds.js'
         'test/*'
       ]
       tasks: 'default'
 
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-mocha'
 
   grunt.registerTask 'default', [
-    'coffee:js'
     'uglify:js'
     'mocha:test'
   ]
