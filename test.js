@@ -1,3 +1,7 @@
+var expect = require('chai').expect;
+
+var rebounds = require('./index');
+
 describe('rebounds', function() {
   var a = {width: 100, height: 100};
   var b = {width: 200, height: 50};
