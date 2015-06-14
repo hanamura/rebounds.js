@@ -2,17 +2,13 @@
   "name": "rebounds",
   "version": "0.2.0",
   "description": "Rectangle scaling functions.",
-  "main": "rebounds.js",
+  "main": "index.js",
   "scripts": {
-    "start": "grunt watch"
+    "test": "mocha"
   },
   "license": "MIT",
   "devDependencies": {
     "chai": "^1.9.1",
-    "grunt": "^0.4.5",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha": "^0.4.10",
     "mocha": "^1.19.0"
   }
 }
